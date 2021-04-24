@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 100
   maxAcc: 2
-  accMultiplier: 1.5
+  accMultiplier: 60
   deceleration: 0.2
+  feetRadius: 0.5
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 183
