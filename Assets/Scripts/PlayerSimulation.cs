@@ -21,7 +21,6 @@ private void addForce(Vector2 force){
     this.acc = Vector2.ClampMagnitude(this.acc, playerData.maxAcc);
     vel += this.acc;
     //this.vel = Vector2.ClampMagnitude(this.vel, playerData.maxSpeed);
-    Debug.Log(vel);
     rb.velocity = vel;
     resetAcc();
   }
