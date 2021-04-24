@@ -10,4 +10,6 @@ class PlayerData : ScriptableObject{
 
   public float feetRadius;
   public LayerMask whatIsGround;
+
+  public float jumpForce;
 }

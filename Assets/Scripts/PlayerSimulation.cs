@@ -25,6 +25,11 @@ private void addForce(Vector2 force){
     resetAcc();
   }
 
+  public void Jump(float force){
+    Rigidbody2D rb = player.gameObject.GetComponent<Rigidbody2D>();
+    rb.AddForce(new Vector2(0,force));
+  }
+
   private void resetAcc() {
     this.acc *= 0;
   }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1252486084}
   - component: {fileID: 1252486086}
   - component: {fileID: 4060701431283799715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -177,7 +177,19 @@ MonoBehaviour:
     m_ActionId: 3d30af69-1043-4a1d-b5f8-fbc4a8ec2748
     m_ActionName: Player/SecureRope[/Keyboard/ctrl,/Keyboard/f]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1252486084}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9623ca51-d83a-4775-8f9e-628641ea918b
     m_ActionName: Player/Jump[/Keyboard/space,/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
@@ -214,7 +226,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fb5b62bb66d46dd37b78f0a29586d420, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -244,7 +256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372006520164033952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
