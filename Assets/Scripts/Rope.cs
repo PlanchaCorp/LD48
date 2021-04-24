@@ -30,4 +30,9 @@ public class Rope : MonoBehaviour
     if (context.canceled || context.performed)
       ropeLogic.ChangeActionState(change);
   }
+
+  public void OnSecureRope(InputAction.CallbackContext context) {
+    if (context.performed)
+      ropeLogic.TrySecureRope();
+  }
 }
