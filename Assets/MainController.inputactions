@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SecureRope",
+                    "name": "ConnectRope",
                     "type": "Button",
                     "id": "3d30af69-1043-4a1d-b5f8-fbc4a8ec2748",
                     "expectedControlType": "Button",
@@ -244,7 +244,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SecureRope",
+                    "action": "ConnectRope",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -255,7 +255,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SecureRope",
+                    "action": "ConnectRope",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
