@@ -79,4 +79,8 @@ public class RopeLogic
         changeLength(1 * ropeData.expandSpeed * time);
     }
   }
+
+  public void TrySecureRope() {
+
+  }
 }

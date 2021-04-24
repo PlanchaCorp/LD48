@@ -632,6 +632,26 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fabce4dc-4905-46c8-b193-8a1684e12b37
     m_ActionName: Player/Rope[/Keyboard/z,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1059241590}
+        m_TargetAssemblyTypeName: Rope, Assembly-CSharp
+        m_MethodName: OnSecureRope
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3d30af69-1043-4a1d-b5f8-fbc4a8ec2748
+    m_ActionName: Player/SecureRope[/Keyboard/ctrl]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9623ca51-d83a-4775-8f9e-628641ea918b
+    m_ActionName: Player/Jump[/Keyboard/space,/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
