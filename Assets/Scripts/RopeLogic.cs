@@ -5,16 +5,20 @@ using UnityEngine;
 public class RopeLogic
 {
   private RopeData ropeData;
+  private Player player;
 
   private RopeSimulation ropeSimulation;
 
   private int linkCount;
   private float lastLinkLength;
   private float ropeAction;
+  private Rigidbody2D lastAnchor;
 
-  public RopeLogic(RopeData ropeData, RopeSimulation ropeSimulation) {
+  public RopeLogic(RopeData ropeData, RopeSimulation ropeSimulation, Transform defaultAnchor, Player player) {
     this.ropeData = ropeData;
     this.ropeSimulation = ropeSimulation;
+    this.player = player;
+    lastAnchor = defaultAnchor.GetComponent<Rigidbody2D>();
     linkCount = 0;
     lastLinkLength = 0;
     ropeAction = 0;
@@ -31,15 +35,13 @@ public class RopeLogic
     if (linkCount == 0) {
       linkCount++;
       float newLinkLength = deltaLength <= ropeData.linkLength ? deltaLength : ropeData.linkLength;
-      ropeSimulation.AppendNode(newLinkLength);
-      lastLinkLength = newLinkLength;
+      AppendLink(newLinkLength);
     } else if (lastLinkLength + deltaLength > ropeData.linkLength) {
       ropeSimulation.resizeLastLink(ropeData.linkLength);
       if (linkCount < ropeData.maxLength / ropeData.linkLength) {
         linkCount++;
         float newNodeLength = (lastLinkLength + deltaLength) - ropeData.linkLength;
-        ropeSimulation.AppendNode(newNodeLength > ropeData.linkLength ? ropeData.linkLength : newNodeLength);
-        lastLinkLength = newNodeLength;
+        AppendLink(newNodeLength > ropeData.linkLength ? ropeData.linkLength : newNodeLength);
       } else {
         lastLinkLength = ropeData.linkLength;
       }
@@ -67,14 +69,21 @@ public class RopeLogic
     }
   }
 
+  private void AppendLink(float newLinkLength) {
+      Rigidbody2D rb = ropeSimulation.AppendNode(newLinkLength, lastAnchor);
+      lastLinkLength = newLinkLength;
+      player.Hook(rb);
+  }
+
   public void ChangeActionState(float actionState) {
     this.ropeAction = actionState;
   }
 
-  public void ConnectRope(HingeJoint2D anchor) {
-    ropeSimulation.AppendNode(ropeData.linkLength);
+  public void AttachRope(DistanceJoint2D anchor, Transform newParent) {
+    ropeSimulation.AppendNode(ropeData.linkLength, lastAnchor);
     ropeSimulation.AnchorLastNode(anchor);
-    ropeSimulation.FreezeNodes();
+    ropeSimulation.FreezeNodes(newParent);
+    lastAnchor = anchor.GetComponent<Rigidbody2D>();
   }
 
   public void Update(float time) {

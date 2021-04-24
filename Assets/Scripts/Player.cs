@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
      private PlayerData playerData;
-    // Start is called before the first frame update
+     [SerializeField]
+     private DistanceJoint2D grapplingHook;
 
     PlayerSimulation playerSimulation;
     PlayerLogic playerLogic;
@@ -38,5 +39,9 @@ public class Player : MonoBehaviour
       if(context.performed){
           playerLogic.Jump();
         }
+    }
+
+    public void Hook(Rigidbody2D target) {
+      playerSimulation.Hook(GetComponent<DistanceJoint2D>(), target);
     }
 }

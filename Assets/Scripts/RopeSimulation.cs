@@ -21,18 +21,23 @@ public class RopeSimulation
     lastLink.localScale = new Vector3(size, lastLink.localScale.y, lastLink.localScale.z);
   }
 
-  public void AppendNode(float size) {
+  public Rigidbody2D AppendNode(float size, Rigidbody2D anchor) {
     GameObject newNode = GameObject.Instantiate(linkPrefab, parent);
     newNode.transform.localScale = new Vector3(size, newNode.transform.localScale.y, 1);
+    DistanceJoint2D joint = newNode.GetComponent<DistanceJoint2D>();
+    joint.distance = size;
     if (links.Count == 0) {
-      newNode.GetComponent<HingeJoint2D>().connectedBody = parent.gameObject.GetComponent<Rigidbody2D>();
+      joint.connectedBody = anchor;
+      joint.autoConfigureDistance = false;
+      joint.distance = 0;
     } else {
       Transform lastLink = links[links.Count - 1];
       Vector2 lastPosition = lastLink.Find("Extremity").transform.position;
       newNode.transform.position = lastPosition;
-      newNode.GetComponent<HingeJoint2D>().connectedBody = lastLink.GetComponent<Rigidbody2D>();
+      joint.connectedBody = lastLink.GetComponent<Rigidbody2D>();
     }
     links.Add(newNode.transform);
+    return newNode.GetComponent<Rigidbody2D>();
   }
 
   public void removeNode() {
@@ -42,17 +47,21 @@ public class RopeSimulation
     }
   }
 
-  public void AnchorLastNode(HingeJoint2D anchor) {
+  public void AnchorLastNode(DistanceJoint2D anchor) {
     if (links.Count > 0) {
       Rigidbody2D lastLink = links[links.Count - 1].GetComponent<Rigidbody2D>();
       anchor.connectedBody = lastLink;
     }
   }
 
-  public void FreezeNodes() {
+  public void FreezeNodes(Transform newParent) {
     foreach (Transform node in links) {
-      node.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+      Rigidbody2D rb = node.GetComponent<Rigidbody2D>();
+      rb.collisionDetectionMode = CollisionDetectionMode2D.Discrete;
+      node.parent = newParent;
+      rb.freezeRotation = true;
     }
+    links = new List<Transform>();
   }
 
 }

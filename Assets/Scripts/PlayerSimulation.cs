@@ -33,4 +33,8 @@ private void addForce(Vector2 force){
   private void resetAcc() {
     this.acc *= 0;
   }
+
+  public void Hook(DistanceJoint2D subject, Rigidbody2D target) {
+    subject.connectedBody = target;
+  }
 }

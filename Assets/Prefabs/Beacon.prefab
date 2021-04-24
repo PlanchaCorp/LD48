@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4054270243765544043}
   - component: {fileID: 6849424860810950807}
   - component: {fileID: 2093082470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7529112127156408955}
   - component: {fileID: 797642465123977030}
   - component: {fileID: 646042900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beacon
   m_TagString: Beacon
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632320213765997771}
   - component: {fileID: 5315548259829193526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

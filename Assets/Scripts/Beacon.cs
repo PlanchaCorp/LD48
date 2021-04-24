@@ -8,7 +8,7 @@ public class Beacon : MonoBehaviour
   [SerializeField]
   private Light2D pointLight;
   [SerializeField]
-  private HingeJoint2D anchor;
+  private DistanceJoint2D anchor;
 
   private bool lighted;
   private bool reachable;
@@ -23,8 +23,7 @@ public class Beacon : MonoBehaviour
     if (pointLight != null)
       pointLight.enabled = true;
     Transform rope = GameObject.FindGameObjectWithTag("Rope").transform;
-    rope.parent = transform;
-    rope.GetComponent<Rope>().Anchor(anchor);
+    rope.GetComponent<Rope>().Anchor(anchor, transform);
   }
 
   public void OnConnectRope(InputAction.CallbackContext context) {

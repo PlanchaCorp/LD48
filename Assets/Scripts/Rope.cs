@@ -17,8 +17,9 @@ public class Rope : MonoBehaviour
     List<Transform> links = new List<Transform>();
     foreach (Transform child in transform)
       links.Add(child);
-    ropeSimulation = new RopeSimulation(linkPrefab, links, transform);
-    ropeLogic = new RopeLogic(ropeData, ropeSimulation);
+    ropeSimulation = new RopeSimulation(linkPrefab, links, transform.parent);
+    Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    ropeLogic = new RopeLogic(ropeData, ropeSimulation, transform.parent, player);
   }
 
   private void Update() {
@@ -31,7 +32,7 @@ public class Rope : MonoBehaviour
       ropeLogic.ChangeActionState(change);
   }
 
-  public void Anchor(HingeJoint2D anchor) {
-    ropeLogic.ConnectRope(anchor);
+  public void Anchor(DistanceJoint2D anchor, Transform newParent) {
+    ropeLogic.AttachRope(anchor, newParent);
   }
 }
