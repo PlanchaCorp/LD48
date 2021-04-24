@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLength: 15
   linkLength: 0.5
+  expandSpeed: 3
+  retractSpeed: 3
