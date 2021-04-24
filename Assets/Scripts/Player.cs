@@ -22,10 +22,7 @@ public class Player : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context) {
         float movement = context.ReadValue<float>();
-        if(context.performed){
-          playerLogic.Move(movement);
-        }
-        if(context.canceled) {
+        if(context.performed || context.canceled){
           playerLogic.Move(movement);
         }
     }

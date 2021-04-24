@@ -6,10 +6,10 @@ class PlayerSimulation {
   public PlayerSimulation(Transform player){
     this.player = player;
   }
-  public void MovePlayer(float movement){
+  public void MovePlayer(Vector2 movement){
     Rigidbody2D rb = player.gameObject.GetComponent<Rigidbody2D>();
-    Vector3 pos = player.position;
-    pos.x += movement;
-    rb.MovePosition(pos);
+    Vector3 velocity = rb.velocity;
+    velocity = movement;
+    rb.velocity= velocity;
   }
 }
