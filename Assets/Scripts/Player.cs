@@ -16,14 +16,16 @@ public class Player : MonoBehaviour
       playerLogic = new PlayerLogic(playerData,playerSimulation);
     }
 
+    void FixedUpdate(){
+      playerLogic.FixedUpdate(Time.fixedDeltaTime);
+    }
+
     public void OnMove(InputAction.CallbackContext context) {
         float movement = context.ReadValue<float>();
         if(context.performed){
-        Debug.Log("perform" + movement);
-        playerLogic.Move(movement);
+          playerLogic.Move(movement);
         }
         if(context.canceled) {
-          Debug.Log("cancel" + movement);
           playerLogic.Move(movement);
         }
     }

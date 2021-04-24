@@ -10,9 +10,9 @@ class PlayerLogic{
   }
 
   public void Move(float movement){
-
+    currentSpeed =+ movement * playerData.moveSpeed;
   }
-  public void FixedUpdate(){
-
+  public void FixedUpdate(float deltaTime){
+      playerSimulation.MovePlayer(currentSpeed * deltaTime);
   }
 }
