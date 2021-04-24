@@ -10,12 +10,14 @@ public class RopeLogic
 
   private int linkCount;
   private float lastLinkLength;
+  private float ropeAction;
 
   public RopeLogic(RopeData ropeData, RopeSimulation ropeSimulation) {
     this.ropeData = ropeData;
     this.ropeSimulation = ropeSimulation;
     linkCount = 0;
     lastLinkLength = 0;
+    ropeAction = 0;
   }
 
   public void changeLength(float deltaLength) {
@@ -54,7 +56,7 @@ public class RopeLogic
         ropeSimulation.removeNode();
         float nextNodeLength = ropeData.linkLength + deltaLength - lastLinkLength;
         if (linkCount > 0) {
-          lastLinkLength = nextNodeLength > 0 ? nextNodeLength : 0;
+          lastLinkLength = nextNodeLength > 0 ? nextNodeLength : 1;
           ropeSimulation.resizeLastLink(lastLinkLength);
         } else
           lastLinkLength = 0;
@@ -63,8 +65,18 @@ public class RopeLogic
       lastLinkLength += deltaLength;
       ropeSimulation.resizeLastLink(lastLinkLength);
     }
-    Debug.Log("Blog");
-    Debug.Log(lastLinkLength);
-    Debug.Log(linkCount);
+  }
+
+  public void ChangeActionState(float actionState) {
+    this.ropeAction = actionState;
+  }
+
+  public void Update(float time) {
+    if (ropeAction != 0) {
+      if (ropeAction > 0)
+        changeLength(-1 * ropeData.retractSpeed * time);
+      else
+        changeLength(1 * ropeData.expandSpeed * time);
+    }
   }
 }

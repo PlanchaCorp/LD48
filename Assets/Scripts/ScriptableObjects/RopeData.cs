@@ -5,4 +5,6 @@ public class RopeData : ScriptableObject
 {
   public float maxLength;
   public float linkLength;
+  public float expandSpeed;
+  public float retractSpeed;
 }
