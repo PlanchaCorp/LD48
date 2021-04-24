@@ -21,7 +21,7 @@ public class RopeSimulation
     lastLink.localScale = new Vector3(size, lastLink.localScale.y, lastLink.localScale.z);
   }
 
-  public void appendNode(float size) {
+  public void AppendNode(float size) {
     GameObject newNode = GameObject.Instantiate(linkPrefab, parent);
     newNode.transform.localScale = new Vector3(size, newNode.transform.localScale.y, 1);
     if (links.Count == 0) {
@@ -39,6 +39,19 @@ public class RopeSimulation
     if (links.Count > 0) {
       GameObject.Destroy(links[links.Count - 1].gameObject);
       links.RemoveAt(links.Count - 1);
+    }
+  }
+
+  public void AnchorLastNode(HingeJoint2D anchor) {
+    if (links.Count > 0) {
+      Rigidbody2D lastLink = links[links.Count - 1].GetComponent<Rigidbody2D>();
+      anchor.connectedBody = lastLink;
+    }
+  }
+
+  public void FreezeNodes() {
+    foreach (Transform node in links) {
+      node.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
     }
   }
 

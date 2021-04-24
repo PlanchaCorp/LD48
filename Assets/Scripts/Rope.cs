@@ -31,8 +31,7 @@ public class Rope : MonoBehaviour
       ropeLogic.ChangeActionState(change);
   }
 
-  public void OnSecureRope(InputAction.CallbackContext context) {
-    if (context.performed)
-      ropeLogic.TrySecureRope();
+  public void Anchor(HingeJoint2D anchor) {
+    ropeLogic.ConnectRope(anchor);
   }
 }
