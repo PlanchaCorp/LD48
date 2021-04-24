@@ -28,10 +28,11 @@ public class RopeLogic
   private void addLength(float deltaLength) {
     if (linkCount == 0) {
       linkCount++;
-      ropeSimulation.appendNode(deltaLength);
-      lastLinkLength = deltaLength;
+      float newLinkLength = deltaLength <= ropeData.linkLength ? deltaLength : ropeData.linkLength;
+      ropeSimulation.appendNode(newLinkLength);
+      lastLinkLength = newLinkLength;
     } else if (lastLinkLength + deltaLength > ropeData.linkLength) {
-      ropeSimulation.resizeLastLink(lastLinkLength);
+      ropeSimulation.resizeLastLink(ropeData.linkLength);
       if (linkCount < ropeData.maxLength / ropeData.linkLength) {
         linkCount++;
         float newNodeLength = (lastLinkLength + deltaLength) - ropeData.linkLength;
@@ -44,8 +45,6 @@ public class RopeLogic
       lastLinkLength += deltaLength;
       ropeSimulation.resizeLastLink(lastLinkLength);
     }
-    Debug.Log(lastLinkLength);
-    Debug.Log(linkCount);
   }
 
   private void removeLength(float deltaLength) {

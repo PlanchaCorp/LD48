@@ -53,7 +53,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &1931559919
 HingeJoint2D:
@@ -75,10 +75,10 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: -135
-    m_UpperAngle: 135
+    m_LowerAngle: 0
+    m_UpperAngle: 0
 --- !u!1 &1205284942958359670
 GameObject:
   m_ObjectHideFlags: 0

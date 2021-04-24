@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee64195ba7b26a547a55900e233ab8da, type: 3}
   m_Name: RopeStandard
   m_EditorClassIdentifier: 
-  maxLength: 9
-  linkLength: 3
+  maxLength: 15
+  linkLength: 0.5

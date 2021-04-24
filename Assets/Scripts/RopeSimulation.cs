@@ -23,7 +23,7 @@ public class RopeSimulation
 
   public void appendNode(float size) {
     GameObject newNode = GameObject.Instantiate(linkPrefab, parent);
-    newNode.transform.localScale = new Vector3(1, newNode.transform.localScale.y, 1);
+    newNode.transform.localScale = new Vector3(size, newNode.transform.localScale.y, 1);
     if (links.Count == 0) {
       newNode.GetComponent<HingeJoint2D>().connectedBody = parent.gameObject.GetComponent<Rigidbody2D>();
     } else {
