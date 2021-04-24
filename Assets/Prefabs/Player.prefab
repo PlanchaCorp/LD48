@@ -171,6 +171,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fabce4dc-4905-46c8-b193-8a1684e12b37
     m_ActionName: Player/Rope[/Keyboard/z,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d30af69-1043-4a1d-b5f8-fbc4a8ec2748
+    m_ActionName: Player/SecureRope[/Keyboard/ctrl,/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9623ca51-d83a-4775-8f9e-628641ea918b
+    m_ActionName: Player/Jump[/Keyboard/space,/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -204,12 +212,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!70 &4060701431283799715
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
