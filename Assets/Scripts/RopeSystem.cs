@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine.InputSystem;
 public class RopeSystem : MonoBehaviour {
   //TODO MAKE PARAMETER
-  public float ropeMaxCastDistance = 20f;
+  public float ropeMaxCastDistance = 8f;
 
   public float climbSpeedBase;
   public GameObject ropeHingeAnchor;
@@ -15,15 +15,19 @@ public class RopeSystem : MonoBehaviour {
   public LineRenderer ropeRenderer;
   public LayerMask ropeLayerMask;
 
-  private List<Vector2> ropePositions = new List<Vector2>();
+  public List<Vector2> ropePositions = new List<Vector2>();
 
-  private bool ropeAttached;
   private Vector2 playerPosition;
   private Rigidbody2D ropeHingeAnchorRb;
   private SpriteRenderer ropeHingeAnchorSprite;
   private bool distanceSet;
   private float climbSpeed;
   private Dictionary<Vector2, int> wrapPointsLookup = new Dictionary<Vector2, int>();
+
+  public bool canClimb = true;
+
+  private bool isColliding;
+
 
   void Awake() {
     // 2ropeJoint
@@ -41,12 +45,12 @@ public class RopeSystem : MonoBehaviour {
 
   void Update() {
     playerPosition = transform.position;
-    UpdateRopePositions();
     // 1
+
     if (ropePositions.Count > 0) {
       // 2
       var lastRopePoint = ropePositions.Last();
-      Debug.DrawRay(playerPosition, (lastRopePoint - playerPosition).normalized,Color.blue);
+      Debug.DrawRay(playerPosition, (lastRopePoint - playerPosition).normalized, Color.blue);
       var playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, Vector2.Distance(playerPosition, lastRopePoint) - 0.1f, ropeLayerMask);
       // 3
       if (playerToCurrentNextHit) {
@@ -62,13 +66,24 @@ public class RopeSystem : MonoBehaviour {
 
           // 5
           ropePositions.Add(closestPointToHit);
+          //Ajouter la distance du secment
           wrapPointsLookup.Add(closestPointToHit, 0);
           distanceSet = false;
         }
       }
+
+
+      HandleRopeUnwrap();
+      UpdateRopePositions();
+      if (canClimb) {
+        if (!isColliding) {
+          ropeJoint.distance += Time.deltaTime * climbSpeed;
+        }
+      }
     }
-    ropeJoint.distance += Time.deltaTime * climbSpeed * climbSpeedBase;
-    HandleRopeUnwrap();
+    if (ropeJoint.distance + SumUsedRopeDistance()  > ropeMaxCastDistance ) {
+      ropeJoint.distance = ropeMaxCastDistance -SumUsedRopeDistance();
+    }
   }
   private void HandleRopeUnwrap() {
     if (ropePositions.Count <= 1) {
@@ -96,7 +111,7 @@ public class RopeSystem : MonoBehaviour {
     // 8
     var playerAngle = Vector2.Angle(anchorPosition, playerDir);
 
-if (playerAngle < hingeAngle) {
+    if (playerAngle < hingeAngle) {
       // 1
       if (wrapPointsLookup[hingePosition] == 1) {
         UnwrapRopePosition(anchorIndex, hingeIndex);
@@ -117,22 +132,24 @@ if (playerAngle < hingeAngle) {
     }
 
   }
+  private float SumUsedRopeDistance(){
+    float sum = 0;
+    for(int i =0 ; i<= ropePositions.Count -2;i++){
+      sum += Vector2.Distance(ropePositions[i],ropePositions[i+1]);
+    }
+    Debug.Log(sum);
+    return sum;
+  }
 
   private void UnwrapRopePosition(int anchorIndex, int hingeIndex) {
-     // 1
+    // 1
     var newAnchorPosition = ropePositions[anchorIndex];
     wrapPointsLookup.Remove(ropePositions[hingeIndex]);
     ropePositions.RemoveAt(hingeIndex);
+    //Supprimer la distance du segment
 
     // 2
     ropeHingeAnchorRb.transform.position = newAnchorPosition;
-    distanceSet = false;
-
-    // Set new rope distance joint distance for anchor position if not yet set.
-    if (distanceSet)
-    {
-        return;
-    }
     ropeJoint.distance = Vector2.Distance(transform.position, newAnchorPosition);
     distanceSet = true;
   }
@@ -183,7 +200,7 @@ if (playerAngle < hingeAngle) {
   public void OnRopeAdjust(InputAction.CallbackContext context) {
     if (context.performed || context.canceled) {
       float value = context.ReadValue<float>();
-      climbSpeed = value;
+      climbSpeed = value * climbSpeedBase;
     }
   }
   public void OnRopeStop(InputAction.CallbackContext context) {
@@ -202,12 +219,18 @@ if (playerAngle < hingeAngle) {
   }
   private void ResetRope() {
     ropeJoint.enabled = false;
-    ropeAttached = false;
     //playerMovement.isSwinging = false;
     ropeRenderer.positionCount = 2;
     ropeRenderer.SetPosition(0, transform.position);
     ropeRenderer.SetPosition(1, transform.position);
     ropePositions.Clear();
     ropeHingeAnchorSprite.enabled = false;
+  }
+  void OnCollisionEnter2D(Collision2D colliderStay) {
+    isColliding = true;
+  }
+
+  private void OnCollisionExit2D(Collision2D colliderOnExit) {
+    isColliding = false;
   }
 }

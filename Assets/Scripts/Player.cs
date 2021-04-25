@@ -7,9 +7,6 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
      private PlayerData playerData;
-     [SerializeField]
-     private DistanceJoint2D grapplingHook;
-
     PlayerSimulation playerSimulation;
     PlayerLogic playerLogic;
 
