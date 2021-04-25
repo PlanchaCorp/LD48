@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616631893}
   m_Layer: 0
-  m_Name: StartBeacon
+  m_Name: RopeAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &694219249
 PrefabInstance:
@@ -399,6 +399,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2095503753, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402169840844424, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 886766371289831364, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
       propertyPath: beaconPlacedEvent
       value: 
@@ -459,9 +467,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.81
       objectReference: {fileID: 0}
+    - target: {fileID: 2846173097407922107, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4671466224141380192, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6665865528402491333, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475267436293172051, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747233746748326232, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
@@ -575,7 +599,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.43, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.31}
 --- !u!1 &817226444
 GameObject:
@@ -698,7 +722,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2136600271945077634, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2136600271945077634, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -748,13 +772,29 @@ PrefabInstance:
       propertyPath: m_MaxDistanceOnly
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5209712639778509299, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5954114028521294957, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 525577003}
     - target: {fileID: 8286303414346373621, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
+      propertyPath: ropeOrigin
+      value: 
+      objectReference: {fileID: 616631893}
+    - target: {fileID: 8286303414346373621, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
+      propertyPath: ROPE_MAX_DISTANCE
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286303414346373621, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: ropeMaxCastDistance
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8286303414346373621, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
+      propertyPath: collisionLayers.m_Bits
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}

@@ -51,7 +51,8 @@ public class BeaconGenerator : MonoBehaviour
       if (reach != null && reach.isPlayerInReach())
         return null;
     }
-    beaconPlacedEvent.Raise();
-    return Instantiate(beaconPrefab, position, transform.rotation, transform);
+    GameObject beacon = Instantiate(beaconPrefab, position, transform.rotation, transform);
+    beaconPlacedEvent.Raise(beacon);
+    return beacon;
   }
 }

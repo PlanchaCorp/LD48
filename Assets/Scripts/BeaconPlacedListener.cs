@@ -4,7 +4,14 @@ using UnityEngine.Events;
 class BeaconPlacedListener : MonoBehaviour
 {
   public BeaconPlacedEvent gameEvent;
-  public UnityEvent response;
+  private RopeSystem _ropeSystem;
+  private RopeSystem ropeSystem {
+    get {
+      if (_ropeSystem == null)
+        _ropeSystem = GetComponent<RopeSystem>();
+      return _ropeSystem;
+    }
+  }
 
   private void OnEnable()
   { gameEvent.RegisterListener(this); }
@@ -12,6 +19,8 @@ class BeaconPlacedListener : MonoBehaviour
   private void OnDisable()
   { gameEvent.UnregisterListener(this); }
 
-  public void OnEventRaised()
-  { response.Invoke(); }
+  public void OnEventRaised(GameObject beacon)
+  {
+    ropeSystem.OnBeaconPlaced(beacon);
+  }
 }
