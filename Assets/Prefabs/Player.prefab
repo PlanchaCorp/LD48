@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4060701431283799715}
   - component: {fileID: 4446918380186927828}
   - component: {fileID: 8286303414346373621}
+  - component: {fileID: 5954114028521294957}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -355,7 +356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: a2884c895a2378e53bd4526befc4166d, type: 2}
-  grapplingHook: {fileID: 0}
 --- !u!50 &1252486086
 Rigidbody2D:
   serializedVersion: 4
@@ -433,6 +433,36 @@ MonoBehaviour:
   ropeLayerMask:
     serializedVersion: 2
     m_Bits: 439
+  ropePositions: []
+  canClimb: 1
+--- !u!114 &5954114028521294957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442422622006846721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527b9a863aa7cee11863fbc8eeba419a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9b99311cd9c2c0ff39dbdbb485a9e5c7, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8286303414346373621}
+        m_TargetAssemblyTypeName: RopeSystem, Assembly-CSharp
+        m_MethodName: OnBeaconPlaced
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4617186013542363979
 GameObject:
   m_ObjectHideFlags: 0

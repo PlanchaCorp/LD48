@@ -36,7 +36,7 @@ public class RopeSystem : MonoBehaviour {
     ropeHingeAnchorSprite = ropeHingeAnchor.GetComponent<SpriteRenderer>();
   }
   void Start() {
-    Vector2 point = GameObject.Find("Beacon").transform.position;
+    Vector2 point = GameObject.Find("StartBeacon").transform.position;
     hook(point);
   }
   private void hook(Vector2 point) {
@@ -137,7 +137,6 @@ public class RopeSystem : MonoBehaviour {
     for(int i =0 ; i<= ropePositions.Count -2;i++){
       sum += Vector2.Distance(ropePositions[i],ropePositions[i+1]);
     }
-    Debug.Log(sum);
     return sum;
   }
 
@@ -232,5 +231,8 @@ public class RopeSystem : MonoBehaviour {
 
   private void OnCollisionExit2D(Collision2D colliderOnExit) {
     isColliding = false;
+  }
+  public void OnBeaconPlaced(){
+      Debug.Log("beacon placed");
   }
 }

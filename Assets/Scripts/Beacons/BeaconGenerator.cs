@@ -7,6 +7,8 @@ public class BeaconGenerator : MonoBehaviour
 {
   [SerializeField]
   private GameObject beaconPrefab;
+  [SerializeField]
+  private BeaconPlacedEvent beaconPlacedEvent;
 
   private List<BeaconReach> beaconReachs;
 
@@ -49,6 +51,7 @@ public class BeaconGenerator : MonoBehaviour
       if (reach != null && reach.isPlayerInReach())
         return null;
     }
+    beaconPlacedEvent.Raise();
     return Instantiate(beaconPrefab, position, transform.rotation, transform);
   }
 }
