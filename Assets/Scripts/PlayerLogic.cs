@@ -29,7 +29,6 @@ private Transform groundcheck;
   }
   public void Jump(){
     if(isGrounded()){
-      Debug.Log("Jump");
       float force = this.playerData.jumpForce;
       playerSimulation.Jump(force);
     }
