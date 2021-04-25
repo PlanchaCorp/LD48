@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 6004189504114536421}
   - component: {fileID: 8134301245376671280}
   - component: {fileID: 66408791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beacon
   m_TagString: Beacon
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 8013520474228881256}
   - component: {fileID: 7306543980881231876}
   - component: {fileID: 8084031349383108460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UniqueReach
   m_TagString: Untagged
   m_Icon: {fileID: 0}

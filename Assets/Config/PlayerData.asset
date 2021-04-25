@@ -20,5 +20,5 @@ MonoBehaviour:
   feetRadius: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 1
   jumpForce: 300

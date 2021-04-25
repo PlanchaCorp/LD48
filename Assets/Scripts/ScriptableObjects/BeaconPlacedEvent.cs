@@ -6,10 +6,12 @@ class BeaconPlacedEvent : ScriptableObject
 {
 
   private List<BeaconPlacedListener> listeners = new List<BeaconPlacedListener>();
+  private GameObject beacon;
 
-  public void Raise() {
+  public void Raise(GameObject beacon) {
+    this.beacon = beacon;
     for(int i = listeners.Count -1; i >= 0; i--)
-      listeners[i].OnEventRaised();
+      listeners[i].OnEventRaised(beacon);
   }
 
   public void RegisterListener(BeaconPlacedListener listener)
