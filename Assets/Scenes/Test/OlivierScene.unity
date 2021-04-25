@@ -130,14 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1252486084, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
-      propertyPath: grapplingHook
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1252486086, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2136600271945077634, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -631,30 +623,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &977142207 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3442422622006846721, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
-  m_PrefabInstance: {fileID: 114154213}
-  m_PrefabAsset: {fileID: 0}
---- !u!232 &977142214
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977142207}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.98, y: 2.09}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.005
-  m_MaxDistanceOnly: 0
 --- !u!1001 &886766370428537637
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,8 +15,9 @@ MonoBehaviour:
   maxSpeed: 100
   maxAcc: 2
   accMultiplier: 60
-  deceleration: 0.2
+  deceleration: 0.05
   feetRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 183
+  jumpForce: 0
