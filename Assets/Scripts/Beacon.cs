@@ -22,8 +22,6 @@ public class Beacon : MonoBehaviour
     lighted = true;
     if (pointLight != null)
       pointLight.enabled = true;
-    Transform rope = GameObject.FindGameObjectWithTag("Rope").transform;
-    rope.GetComponent<Rope>().Anchor(anchor, transform);
   }
 
   public void OnConnectRope(InputAction.CallbackContext context) {

@@ -6,7 +6,9 @@ class PlayerData : ScriptableObject{
   public float maxAcc;
 
   public float accMultiplier;
-  public float deceleration;
+  public float groundedHorizontalFriction;
+  public float aerialHorizontalFriction;
+
 
   public float feetRadius;
   public LayerMask whatIsGround;

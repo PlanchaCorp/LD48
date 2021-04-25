@@ -14,8 +14,15 @@ private Transform groundcheck;
     currentMovement = new Vector2(movement,0);
   }
   public void FixedUpdate(float deltaTime){
-      playerSimulation.MovePlayer(currentMovement * deltaTime, this.playerData);
+      playerSimulation.MovePlayer(currentMovement * deltaTime);
+      if(isGrounded()) {
+        playerSimulation.groundFriction();
+      } else {
+        playerSimulation.aerialFriction();
+      }
+       playerSimulation.StepMovementSimuation();
   }
+
   public bool isGrounded(){
     Collider2D[] groundColliders = Physics2D.OverlapCircleAll(groundcheck.position, playerData.feetRadius, playerData.whatIsGround);
      return groundColliders.Length > 0;
