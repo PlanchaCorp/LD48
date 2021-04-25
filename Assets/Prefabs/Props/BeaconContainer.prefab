@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &622327392
+--- !u!1 &2095503753
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,55 +8,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 622327393}
-  - component: {fileID: 622327394}
-  m_Layer: 8
-  m_Name: Structure
+  - component: {fileID: 2095503754}
+  - component: {fileID: 2095503756}
+  - component: {fileID: 2095503755}
+  m_Layer: 0
+  m_Name: BeaconEndArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &622327393
+--- !u!4 &2095503754
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622327392}
+  m_GameObject: {fileID: 2095503753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2036530950019130157}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &622327394
-BoxCollider2D:
+--- !u!58 &2095503756
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622327392}
+  m_GameObject: {fileID: 2095503753}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029712588, y: -0.5872611}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.62139124, y: 0.10547781}
-  m_EdgeRadius: 0
+  m_Radius: 0.8318094
+--- !u!114 &2095503755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095503753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eadfb1db899fa7e6a8849a4cdaea9a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886766371289831418
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 886766371289831418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efcab640c33fa529882028970dd5a21, type: 3}
+  m_Script: {fileID: 11500000, guid: bfbdd311d765238a9a2b55628cca7b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   beaconPrefab: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
@@ -201,55 +204,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!58 &4145593213921908370
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671466224141380192}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.75538504
---- !u!114 &66408789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671466224141380192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c892d9d19056a986b3aa66f3a5f832d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &66408791
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4671466224141380192}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &5697084938610445512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,10 +214,6 @@ PrefabInstance:
     - target: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_Name
       value: FinalBeacon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_RootOrder
@@ -309,15 +259,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2292112464703534638, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
-    - {fileID: 5068698542567911738, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
---- !u!1 &4671466224141380192 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
-  m_PrefabInstance: {fileID: 5697084938610445512}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2036530950019130157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
