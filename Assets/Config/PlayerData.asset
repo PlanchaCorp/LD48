@@ -15,7 +15,8 @@ MonoBehaviour:
   maxSpeed: 200
   maxAcc: 2
   accMultiplier: 60
-  deceleration: 0.2
+  groundedHorizontalFriction: 0.15
+  aerialHorizontalFriction: 0.2
   feetRadius: 0.5
   whatIsGround:
     serializedVersion: 2
