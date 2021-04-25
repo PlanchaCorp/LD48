@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeaconEnd : MonoBehaviour
+public class BeaconReach : MonoBehaviour
 {
   private bool playerInReach;
 
@@ -11,7 +11,6 @@ public class BeaconEnd : MonoBehaviour
   }
 
   private void OnTriggerEnter2D(Collider2D collider) {
-    Debug.Log(collider.name);
     if (collider.CompareTag("Player"))
       playerInReach = true;
   }
