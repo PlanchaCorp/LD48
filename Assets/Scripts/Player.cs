@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     Transform groundCheck;
     void Awake(){
-      playerSimulation = new PlayerSimulation(transform);
+      playerSimulation = new PlayerSimulation(transform,playerData);
       groundCheck = transform.Find("GroundCheck");
       playerLogic = new PlayerLogic(playerData,playerSimulation,groundCheck);
     }

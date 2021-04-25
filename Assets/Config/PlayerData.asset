@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17f97cf6f2067033beb49dc9dfff0e4, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  maxSpeed: 100
+  maxSpeed: 200
   maxAcc: 2
   accMultiplier: 60
-  deceleration: 0.05
+  deceleration: 0.2
   feetRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 183
-  jumpForce: 0
+  jumpForce: 300
