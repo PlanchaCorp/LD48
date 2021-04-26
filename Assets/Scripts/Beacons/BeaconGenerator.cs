@@ -53,6 +53,8 @@ public class BeaconGenerator : MonoBehaviour
     if (endBeacon != null && endBeacon.isPlayerInReach()) {
       soundManager.ConnectEnd();
       beaconPlacedEvent.Raise(endBeacon.gameObject);
+      IEnumerator finishCoroutine = FinishLevel();
+      StartCoroutine(finishCoroutine);
       return endBeacon.gameObject;
     }
     foreach (BeaconReach reach in beaconReachs) {
@@ -69,5 +71,10 @@ public class BeaconGenerator : MonoBehaviour
     beaconPlacedEvent.Raise(beacon);
 
     return beacon;
+  }
+
+  private IEnumerator FinishLevel() {
+    yield return new WaitForSeconds(1.0f);
+    Debug.Log("FINISH");
   }
 }

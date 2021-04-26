@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+      AudioListener.volume = 0.15f;
         inGameMusic = gameObject.GetComponent<AudioSource>();
         jump = transform.Find("Jump").GetComponent<AudioSource>();
         fall = transform.Find("Fall").GetComponent<AudioSource>();
