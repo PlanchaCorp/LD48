@@ -59,7 +59,7 @@ public class BeaconGenerator : MonoBehaviour
       if (reach != null && reach.isPlayerInReach())
         return null;
     }
-    if(!canPlace)
+    if(!canPlace || position.y < endBeacon.transform.position.y)
     {
       soundManager.Fall();
       return null;
