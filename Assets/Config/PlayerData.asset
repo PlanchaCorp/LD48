@@ -16,7 +16,7 @@ MonoBehaviour:
   maxAcc: 2
   accMultiplier: 60
   groundedHorizontalFriction: 0.1
-  aerialHorizontalFriction: 0.2
+  aerialHorizontalFriction: 0.15
   feetRadius: 0.5
   whatIsGround:
     serializedVersion: 2
