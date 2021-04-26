@@ -18,6 +18,8 @@ class PlayerLogic{
 
   public void Move(float movement){
     currentMovement = new Vector2(movement,0);
+    if (movement != 0)
+      playerSimulation.FaceDirection(movement > 0);
   }
   public void FixedUpdate(float deltaTime){
       playerSimulation.MovePlayer(currentMovement * deltaTime);

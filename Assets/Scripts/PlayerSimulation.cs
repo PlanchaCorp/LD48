@@ -19,6 +19,13 @@ private void addForce(Vector2 force){
     this.animator = animator;
   }
 
+  public void FaceDirection(bool faceRight) {
+    if (faceRight)
+      animator.SetBool("FacingRight", true);
+    else
+      animator.SetBool("FacingRight", false);
+  }
+
   public void StepMovementSimuation(){
     Vector2 vel = rb.velocity;
     this.pos += vel;
@@ -27,10 +34,6 @@ private void addForce(Vector2 force){
     //this.vel = Vector2.ClampMagnitude(this.vel, playerData.maxSpeed);
     rb.velocity = vel;
     resetAcc();
-    if (vel.x < 0)
-      animator.SetBool("FacingRight", false);
-    else if (vel.x > 0)
-      animator.SetBool("FacingRight", true);
     animator.SetBool("IsRunning", vel.x != 0);
   }
   public void groundFriction(){
