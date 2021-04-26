@@ -247,8 +247,10 @@ public class RopeSystem : MonoBehaviour {
     isColliding = false;
   }
   public void OnBeaconPlaced(GameObject beacon){
-    Instantiate(ropeRenderer, beacon.transform);
-    ropeOrigin = beacon.transform;
+    LineRenderer attachedRope = Instantiate(ropeRenderer, beacon.transform);
+    Transform attachedPoint = beacon.transform.Find("AttachedPoint");
+    attachedRope.SetPosition(ropeRenderer.positionCount - 1, attachedPoint != null ? attachedPoint.position : beacon.transform.position);
+    ropeOrigin = attachedPoint != null ? attachedPoint : beacon.transform;
     ResetRope();
     distanceSet = true;
     hook(ropeOrigin.position);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class BeaconGenerator : MonoBehaviour
 {
@@ -53,13 +54,15 @@ public class BeaconGenerator : MonoBehaviour
     if (endBeacon != null && endBeacon.isPlayerInReach()) {
       soundManager.ConnectEnd();
       beaconPlacedEvent.Raise(endBeacon.gameObject);
+      IEnumerator finishCoroutine = FinishLevel();
+      StartCoroutine(finishCoroutine);
       return endBeacon.gameObject;
     }
     foreach (BeaconReach reach in beaconReachs) {
       if (reach != null && reach.isPlayerInReach())
         return null;
     }
-    if(!canPlace)
+    if(!canPlace || position.y < endBeacon.transform.position.y)
     {
       soundManager.Fall();
       return null;
@@ -69,5 +72,10 @@ public class BeaconGenerator : MonoBehaviour
     beaconPlacedEvent.Raise(beacon);
 
     return beacon;
+  }
+
+  private IEnumerator FinishLevel() {
+    yield return new WaitForSeconds(2.0f);
+    SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
   }
 }
