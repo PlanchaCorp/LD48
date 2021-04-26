@@ -61,6 +61,7 @@ public class BeaconGenerator : MonoBehaviour
     }
     if(!canPlace)
     {
+      soundManager.Fall();
       return null;
     }
     GameObject beacon = Instantiate(beaconPrefab, position, transform.rotation, transform);

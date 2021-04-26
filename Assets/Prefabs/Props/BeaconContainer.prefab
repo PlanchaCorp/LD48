@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beaconPrefab: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
   beaconPlacedEvent: {fileID: 11400000, guid: 9b99311cd9c2c0ff39dbdbb485a9e5c7, type: 2}
+  canPlace: 1
 --- !u!114 &886766371289831365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +338,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: Priority
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: MaxDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: MinDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 341e93cc6242245cf838ff2f0a5e9ac2, type: 3}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.016927093
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.42578125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 0.9942398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -423,6 +476,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: MaxDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: MinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013520474228881256, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -434,10 +499,6 @@ PrefabInstance:
     - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_SortingLayerID
       value: -1597002481
-      objectReference: {fileID: 0}
-    - target: {fileID: 8013520474228881256, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
