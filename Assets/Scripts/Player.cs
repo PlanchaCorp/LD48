@@ -6,13 +6,14 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-     private PlayerData playerData;
+    private PlayerData playerData;
     PlayerSimulation playerSimulation;
     PlayerLogic playerLogic;
 
     Transform groundCheck;
     void Awake(){
-      playerSimulation = new PlayerSimulation(transform,playerData);
+      Animator animator = GetComponent<Animator>();
+      playerSimulation = new PlayerSimulation(transform, playerData, animator);
       groundCheck = transform.Find("GroundCheck");
       playerLogic = new PlayerLogic(playerData,playerSimulation,groundCheck);
     }
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour
       if(playerLogic.isGrounded()){
         GetComponent<SpriteRenderer>().color = Color.red;
       } else {
-         GetComponent<SpriteRenderer>().color = Color.blue;
+        GetComponent<SpriteRenderer>().color = Color.blue;
       }
     }
 

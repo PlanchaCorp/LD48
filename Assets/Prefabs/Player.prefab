@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 4446918380186927828}
   - component: {fileID: 8286303414346373621}
   - component: {fileID: 5954114028521294957}
+  - component: {fileID: 497586160}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -162,7 +163,7 @@ Transform:
   m_GameObject: {fileID: 3442422622006846721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8909278, y: -3.4382596, z: 0}
-  m_LocalScale: {x: 0.7, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 372006520164033952}
   - {fileID: 6343370369973083368}
@@ -210,7 +211,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 694aa06c03c1f602db90761037d36027, type: 3}
   m_Color: {r: 0.7155368, g: 0.24150053, b: 0.764151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -371,7 +372,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: fb5b62bb66d46dd37b78f0a29586d420, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -424,17 +425,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86fc173f3515645fa084dac6237b6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ropeMaxCastDistance: 5
   climbSpeedBase: 10
   ropeHingeAnchor: {fileID: 7727183386288068377}
   ropeJoint: {fileID: 4446918380186927828}
   player: {fileID: 1252486084}
-  ropeRenderer: {fileID: 3631688813149052492}
-  ropeLayerMask:
-    serializedVersion: 2
-    m_Bits: 439
-  ropePositions: []
   canClimb: 1
+  ROPE_MAX_DISTANCE: 0
+  ropeOrigin: {fileID: 0}
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  ropePositions: []
+  ropeRenderer: {fileID: 3631688813149052492}
 --- !u!114 &5954114028521294957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,21 +450,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 9b99311cd9c2c0ff39dbdbb485a9e5c7, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8286303414346373621}
-        m_TargetAssemblyTypeName: RopeSystem, Assembly-CSharp
-        m_MethodName: OnBeaconPlaced
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!95 &497586160
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442422622006846721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18404755a03814536ab45deebb1bdd69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4617186013542363979
 GameObject:
   m_ObjectHideFlags: 0
