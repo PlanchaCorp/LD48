@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource fall;
     private AudioSource steps;
     private AudioSource beaconPlacement;
+    private AudioSource connectEnd;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class SoundManager : MonoBehaviour
         fall = transform.Find("Fall").GetComponent<AudioSource>();
         steps = transform.Find("Steps").GetComponent<AudioSource>();
         beaconPlacement = transform.Find("BeaconPlacement").GetComponent<AudioSource>();
+        connectEnd = transform.Find("ConnectEnd").GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject);
     }
 
@@ -32,5 +34,8 @@ public class SoundManager : MonoBehaviour
     }
     public void PlaceBeacon() {
         beaconPlacement.Play();
+    }
+    public void ConnectEnd() {
+      connectEnd.Play();
     }
 }
