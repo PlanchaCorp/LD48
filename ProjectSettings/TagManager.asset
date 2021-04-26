@@ -7,6 +7,7 @@ TagManager:
   - Beacon
   - Rope
   - Link
+  - SoundManager
   layers:
   - Default
   - TransparentFX

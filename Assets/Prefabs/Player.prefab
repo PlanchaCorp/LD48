@@ -339,6 +339,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9623ca51-d83a-4775-8f9e-628641ea918b
     m_ActionName: Player/Jump[/Keyboard/space,/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 55a3da3d-7a44-4936-a6d9-df0ef4967b7d
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -430,11 +434,11 @@ MonoBehaviour:
   ropeJoint: {fileID: 4446918380186927828}
   player: {fileID: 1252486084}
   canClimb: 1
-  ROPE_MAX_DISTANCE: 0
+  ROPE_MAX_DISTANCE: 8
   ropeOrigin: {fileID: 0}
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   ropePositions: []
   ropeRenderer: {fileID: 3631688813149052492}
 --- !u!114 &5954114028521294957
