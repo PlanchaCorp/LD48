@@ -10,12 +10,15 @@ public class Player : MonoBehaviour
     PlayerSimulation playerSimulation;
     PlayerLogic playerLogic;
 
+
     Transform groundCheck;
     void Awake(){
       Animator animator = GetComponent<Animator>();
       playerSimulation = new PlayerSimulation(transform, playerData, animator);
       groundCheck = transform.Find("GroundCheck");
-      playerLogic = new PlayerLogic(playerData,playerSimulation,groundCheck);
+      playerLogic = new PlayerLogic(playerData, playerSimulation, groundCheck);
+      SoundManager soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+      playerLogic.AttachSoundManager(soundManager);
     }
 
     void FixedUpdate(){
@@ -30,8 +33,8 @@ public class Player : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext context) {
       if(context.performed){
-          playerLogic.Jump();
-        }
+        playerLogic.Jump();
+      }
     }
 
     public void Hook(Rigidbody2D target) {
