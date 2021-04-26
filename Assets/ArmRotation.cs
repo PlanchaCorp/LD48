@@ -11,7 +11,7 @@ public class ArmRotation : MonoBehaviour
     void Update()
     {
         var angle = AngleBetweenVector2(transform.position,anchor.position);
-        transform.eulerAngles = new Vector3(0,0, angle);
+        transform.eulerAngles = new Vector3(0,0, angle + 115);
     }
     private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
  {

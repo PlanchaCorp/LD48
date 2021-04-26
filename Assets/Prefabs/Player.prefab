@@ -94,8 +94,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.92156863, g: 0.69411767, b: 0.40784314, a: 0.47058824}
-      key1: {r: 0.92156863, g: 0.69411767, b: 0.40784314, a: 0.47058824}
+      key0: {r: 0.39215687, g: 0.7607843, b: 0.87058824, a: 0.34509805}
+      key1: {r: 0.39215687, g: 0.7607843, b: 0.87058824, a: 0.34509805}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -618,6 +618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4505271322926397023}
+  - component: {fileID: 5900512303204094344}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -640,6 +641,19 @@ Transform:
   m_Father: {fileID: 2136600271945077634}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5900512303204094344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4835899481274098976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c62d5cb3ec43264eb8e5d1d75627e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 6343370369973083368}
 --- !u!1 &7727183386288068377
 GameObject:
   m_ObjectHideFlags: 0
