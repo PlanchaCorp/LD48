@@ -94,6 +94,7 @@ public class RopeSystem : MonoBehaviour {
     ropeRenderer.positionCount = 2;
     ropeRenderer.SetPosition(0, ropeOrigin.position);
     ropeRenderer.SetPosition(1, ropeOrigin.position);
+    ropeJoint.distance = 0;
     ropePositions.Clear();
     wrapPointsLookup.Clear();
     ropeHingeAnchorSprite.enabled = false;
