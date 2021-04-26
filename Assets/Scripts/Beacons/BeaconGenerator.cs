@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class BeaconGenerator : MonoBehaviour
 {
@@ -74,7 +75,7 @@ public class BeaconGenerator : MonoBehaviour
   }
 
   private IEnumerator FinishLevel() {
-    yield return new WaitForSeconds(1.0f);
-    Debug.Log("FINISH");
+    yield return new WaitForSeconds(2.0f);
+    SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
   }
 }
