@@ -913,12 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
---- !u!4 &1539446078 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6665865528402491333, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
-  m_PrefabInstance: {fileID: 607518733}
-  m_PrefabAsset: {fileID: 0}
---- !u!43 &1848957012
+--- !u!43 &1491373281
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1082,6 +1077,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &1539446078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6665865528402491333, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+  m_PrefabInstance: {fileID: 607518733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1920184594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18608,6 +18608,14 @@ PrefabInstance:
     - target: {fileID: 2996199488206396605, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996199488206396605, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996199488206396605, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
