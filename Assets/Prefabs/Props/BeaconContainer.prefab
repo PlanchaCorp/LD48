@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beaconPrefab: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+  beaconPlacedEvent: {fileID: 0}
 --- !u!114 &886766371289831365
 MonoBehaviour:
   m_ObjectHideFlags: 0
