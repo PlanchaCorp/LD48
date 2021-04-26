@@ -20,11 +20,6 @@ public class Player : MonoBehaviour
 
     void FixedUpdate(){
       playerLogic.FixedUpdate(Time.fixedDeltaTime);
-      if(playerLogic.isGrounded()){
-        GetComponent<SpriteRenderer>().color = Color.red;
-      } else {
-        GetComponent<SpriteRenderer>().color = Color.blue;
-      }
     }
 
     public void OnMove(InputAction.CallbackContext context) {
