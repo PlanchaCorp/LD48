@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartBeacon
       objectReference: {fileID: 0}
+    - target: {fileID: 2079182093324008400, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -312,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -324,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -336,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: Priority
@@ -391,6 +395,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33f105b9b8ac98e4fac085688c124619, type: 3}
+    - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
@@ -424,6 +432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalBeacon
       objectReference: {fileID: 0}
+    - target: {fileID: 2079182093324008400, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -450,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -462,7 +474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -474,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6699560963211145768, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: MaxDistance
@@ -488,6 +500,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 668e4a0e663b99948a93f680ae2f348f, type: 3}
     - target: {fileID: 8134301245376671280, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_SortingLayer
       value: 1
