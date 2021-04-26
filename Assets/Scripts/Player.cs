@@ -9,9 +9,9 @@ public class Player : MonoBehaviour
     private PlayerData playerData;
     PlayerSimulation playerSimulation;
     PlayerLogic playerLogic;
-
-
     Transform groundCheck;
+
+    public Transform hook;
     void Awake(){
       Animator animator = GetComponent<Animator>();
       playerSimulation = new PlayerSimulation(transform, playerData, animator);
@@ -39,5 +39,13 @@ public class Player : MonoBehaviour
 
     public void Hook(Rigidbody2D target) {
       playerSimulation.Hook(GetComponent<DistanceJoint2D>(), target);
+    }
+    public void OnCollisionEnter2D(Collision2D collision){
+      if(collision.gameObject.tag == "Trap"){
+        Kill();
+      }
+    }
+    public void Kill(){
+        Destroy(gameObject);
     }
 }

@@ -9,18 +9,25 @@ public class FollowBeacons : MonoBehaviour
     private Transform lookAt;
     private Transform follow;
 
+
   public void OnBeaconPlaced(GameObject beacon){
     GetComponent<CinemachineVirtualCamera>().Follow = beacon.transform;
     follow = GetComponent<CinemachineVirtualCamera>().Follow;
   }
+
+  public void OnCut(){
+    lookAt = null;
+  }
+  
   void Start(){
       lookAt = GetComponent<CinemachineVirtualCamera>().LookAt;
       follow = GetComponent<CinemachineVirtualCamera>().Follow;
   }
   void Update(){
 
-    Debug.Log(lookAt.position);
+   if(lookAt != null){
     CinemachineFramingTransposer comp = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>();
     comp.m_TrackedObjectOffset = follow.position - lookAt.position;
+   }
   }
 }

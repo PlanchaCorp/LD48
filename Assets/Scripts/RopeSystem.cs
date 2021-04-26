@@ -106,8 +106,9 @@ public class RopeSystem : MonoBehaviour {
   public void Cut(){
     ropeRenderer.enabled = false;
     ropeJoint.enabled = false;
-     ropePositions.Clear();
-     wrapPointsLookup.Clear();
+    ropePositions.Clear();
+    wrapPointsLookup.Clear();
+    GameObject.Find("vc").GetComponent<FollowBeacons>().OnCut();
   }
 
   void Update() {
