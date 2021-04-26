@@ -55,6 +55,10 @@ public class RopeSystem : MonoBehaviour {
     Debug.DrawRay(playerPosition, (lastRopePoint - playerPosition).normalized * raycastLength, Color.blue);
     RaycastHit2D playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, raycastLength, collisionLayers);
     if (playerToCurrentNextHit) {
+      if (playerToCurrentNextHit.collider.tag.Equals("Trap")){
+        Cut();
+        return;
+      }
       var colliderWithVertices = playerToCurrentNextHit.collider as PolygonCollider2D;
         if (colliderWithVertices != null)
         {
@@ -98,6 +102,12 @@ public class RopeSystem : MonoBehaviour {
     ropePositions.Clear();
     wrapPointsLookup.Clear();
     ropeHingeAnchorSprite.enabled = false;
+  }
+  public void Cut(){
+    ropeRenderer.enabled = false;
+    ropeJoint.enabled = false;
+     ropePositions.Clear();
+     wrapPointsLookup.Clear();
   }
 
   void Update() {
@@ -255,4 +265,5 @@ public class RopeSystem : MonoBehaviour {
     distanceSet = true;
     hook(ropeOrigin.position);
   }
+
 }

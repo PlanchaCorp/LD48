@@ -523,7 +523,7 @@ MonoBehaviour:
   ropeOrigin: {fileID: 0}
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1032
   ropePositions: []
   ropeRenderer: {fileID: 3631688813149052492}
 --- !u!114 &5954114028521294957

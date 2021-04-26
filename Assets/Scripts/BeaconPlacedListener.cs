@@ -5,6 +5,14 @@ class BeaconPlacedListener : MonoBehaviour
 {
   public BeaconPlacedEvent gameEvent;
   private RopeSystem _ropeSystem;
+  private FollowBeacons _followBeacon;
+  private FollowBeacons followBeacon {
+    get {
+      if (_followBeacon == null)
+        _followBeacon = GameObject.Find("vcam").GetComponent<FollowBeacons>();
+      return _followBeacon;
+    }
+  }
   private RopeSystem ropeSystem {
     get {
       if (_ropeSystem == null)
@@ -22,5 +30,6 @@ class BeaconPlacedListener : MonoBehaviour
   public void OnEventRaised(GameObject beacon)
   {
     ropeSystem.OnBeaconPlaced(beacon);
+    followBeacon.OnBeaconPlaced(beacon);
   }
 }
