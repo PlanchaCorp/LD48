@@ -11,13 +11,15 @@ public class Player : MonoBehaviour
     PlayerLogic playerLogic;
     Transform groundCheck;
 
+    SoundManager soundManager;
+
     public Transform hook;
     void Awake(){
       Animator animator = GetComponent<Animator>();
       playerSimulation = new PlayerSimulation(transform, playerData, animator);
       groundCheck = transform.Find("GroundCheck");
       playerLogic = new PlayerLogic(playerData, playerSimulation, groundCheck);
-      SoundManager soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+      soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
       playerLogic.AttachSoundManager(soundManager);
     }
 
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
       }
     }
     public void Kill(){
-        Destroy(gameObject);
+        soundManager.Death();
+        GameObject.Find("GameManager").GetComponent<gameManager>().OnclickReset();
     }
 }

@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource inGameMusic;
 
     private AudioSource jump;
+    private AudioSource death;
     private AudioSource fall;
     private AudioSource steps;
     private AudioSource beaconPlacement;
@@ -17,6 +18,7 @@ public class SoundManager : MonoBehaviour
       AudioListener.volume = 0.15f;
         inGameMusic = gameObject.GetComponent<AudioSource>();
         jump = transform.Find("Jump").GetComponent<AudioSource>();
+        death = transform.Find("Death").GetComponent<AudioSource>();
         fall = transform.Find("Fall").GetComponent<AudioSource>();
         steps = transform.Find("Steps").GetComponent<AudioSource>();
         beaconPlacement = transform.Find("BeaconPlacement").GetComponent<AudioSource>();
@@ -26,6 +28,9 @@ public class SoundManager : MonoBehaviour
 
     public void Jump() {
         jump.Play();
+    }
+        public void Death() {
+        death.Play();
     }
     public void Fall() {
         fall.Play();
