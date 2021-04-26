@@ -9,6 +9,7 @@ TagManager:
   - Link
   - SoundManager
   - Trap
+  - baliseTags
   layers:
   - Default
   - TransparentFX

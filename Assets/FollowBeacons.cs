@@ -28,11 +28,7 @@ public class FollowBeacons : MonoBehaviour
   void Update(){
    if(player != null){
     CinemachineFramingTransposer comp = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>();
-    if(first){
-    comp.m_TrackedObjectOffset =   beacon.position - player.position;
-    } else {
     comp.m_TrackedObjectOffset =  player.position - beacon.position;
-    }
    }
   }
 }

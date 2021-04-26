@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6123393000370631923}
   m_Layer: 0
   m_Name: BaliseTileMap
-  m_TagString: Untagged
+  m_TagString: baliseTags
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   - {x: 3.1688173, y: 3.3098063, z: 0}
   m_ShapePathHash: -590296930
   m_Mesh: {fileID: 0}
-  m_InstanceId: 21768
+  m_InstanceId: 48756
 --- !u!1 &749050800002188901
 GameObject:
   m_ObjectHideFlags: 0

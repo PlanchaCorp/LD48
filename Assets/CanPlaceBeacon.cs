@@ -12,9 +12,11 @@ public class CanPlaceBeacon : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D colision){
-      beaconGenerator.canPlace = true;
+      if(colision.gameObject.tag.Equals("baliseTags"))
+        beaconGenerator.canPlace = true;
     }
     void OnTriggerExit2D(Collider2D colision){
-      beaconGenerator.canPlace = false;
+      if(colision.gameObject.tag.Equals("baliseTags"))
+        beaconGenerator.canPlace = false;
     }
 }
