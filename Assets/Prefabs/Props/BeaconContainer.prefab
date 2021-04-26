@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2095503754}
   - component: {fileID: 2095503756}
   - component: {fileID: 2095503755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeaconEndArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beaconPrefab: {fileID: 1136170818405148328, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
+  beaconPlacedEvent: {fileID: 0}
 --- !u!114 &886766371289831365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d89d3059-ca1f-4d8d-9a39-9c901c4e5573
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 55a3da3d-7a44-4936-a6d9-df0ef4967b7d
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -216,7 +221,7 @@ GameObject:
   - component: {fileID: 5984736845930454698}
   - component: {fileID: 1816512716584377934}
   - component: {fileID: 2459868732585622132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeaconEndArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}

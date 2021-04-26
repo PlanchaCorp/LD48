@@ -55,18 +55,9 @@ public class RopeSystem : MonoBehaviour {
     Debug.DrawRay(playerPosition, (lastRopePoint - playerPosition).normalized * raycastLength, Color.blue);
     RaycastHit2D playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, raycastLength, collisionLayers);
     if (playerToCurrentNextHit) {
-      PolygonCollider2D colliderWithVertices = playerToCurrentNextHit.collider as PolygonCollider2D;
-      if (colliderWithVertices != null) {
-        Vector2 closestPointToHit = GetClosestColliderPointFromRaycastHit(playerToCurrentNextHit, colliderWithVertices);
-        if (wrapPointsLookup.ContainsKey(closestPointToHit)) {
-          ResetRope();
-          return;
-        }
-        ropePositions.Add(closestPointToHit);
-        // Add segment distance
-        wrapPointsLookup.Add(closestPointToHit, 0);
+        ropePositions.Add(playerToCurrentNextHit.point);
+        wrapPointsLookup.Add(playerToCurrentNextHit.point, 0);
         distanceSet = false;
-      }
     }
   }
 
