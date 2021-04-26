@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
   public void OnclickReset(){
-    Debug.Log("restart");
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 }
