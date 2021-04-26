@@ -6,28 +6,33 @@ using Cinemachine;
 public class FollowBeacons : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Transform lookAt;
-    private Transform follow;
-
+    private Transform player;
+    private Transform beacon;
+    private bool first = true;
 
   public void OnBeaconPlaced(GameObject beacon){
     GetComponent<CinemachineVirtualCamera>().Follow = beacon.transform;
-    follow = GetComponent<CinemachineVirtualCamera>().Follow;
+    this.beacon = GetComponent<CinemachineVirtualCamera>().Follow;
+    first = false;
   }
 
   public void OnCut(){
-    lookAt = null;
+    player = null;
   }
-  
+
   void Start(){
-      lookAt = GetComponent<CinemachineVirtualCamera>().LookAt;
-      follow = GetComponent<CinemachineVirtualCamera>().Follow;
+      player = GetComponent<CinemachineVirtualCamera>().LookAt;
+      beacon = GetComponent<CinemachineVirtualCamera>().Follow;
+
   }
   void Update(){
-
-   if(lookAt != null){
+   if(player != null){
     CinemachineFramingTransposer comp = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>();
-    comp.m_TrackedObjectOffset = follow.position - lookAt.position;
+    if(first){
+    comp.m_TrackedObjectOffset =   beacon.position - player.position;
+    } else {
+    comp.m_TrackedObjectOffset =  player.position - beacon.position;
+    }
    }
   }
 }

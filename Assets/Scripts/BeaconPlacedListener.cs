@@ -9,7 +9,7 @@ class BeaconPlacedListener : MonoBehaviour
   private FollowBeacons followBeacon {
     get {
       if (_followBeacon == null)
-        _followBeacon = GameObject.Find("vcam").GetComponent<FollowBeacons>();
+        _followBeacon = GameObject.Find("vc").GetComponent<FollowBeacons>();
       return _followBeacon;
     }
   }

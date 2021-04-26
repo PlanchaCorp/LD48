@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -25,4 +26,21 @@ public class MainMenu : MonoBehaviour
     else
       tracker.position = mainPanel.transform.position;
   }
+  public void onStart(){
+      SceneManager.LoadScene(1);
+  }
+    public void onLevel1(){
+SceneManager.LoadScene(1);
+  }
+      public void onLevel2(){
+SceneManager.LoadScene(2);
+  }
+      public void onLevel3(){
+SceneManager.LoadScene(3);
+  }
+      public void onLevel4(){
+SceneManager.LoadScene(5);
+  }
+
+
 }
