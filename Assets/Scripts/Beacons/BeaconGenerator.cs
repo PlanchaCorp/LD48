@@ -49,8 +49,9 @@ public class BeaconGenerator : MonoBehaviour
 
   private GameObject PlaceBeacon(Vector2 position) {
     if (endBeacon != null && endBeacon.isPlayerInReach()) {
-      Debug.Log("End");
-      return null;
+      soundManager.ConnectEnd();
+      beaconPlacedEvent.Raise(endBeacon.gameObject);
+      return endBeacon.gameObject;
     }
     foreach (BeaconReach reach in beaconReachs) {
       if (reach != null && reach.isPlayerInReach())
