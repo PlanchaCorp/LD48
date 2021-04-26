@@ -8,6 +8,7 @@ TagManager:
   - Rope
   - Link
   - SoundManager
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Rope
   - Background
   - Post-Processing
-  - 
+  - Traps
   - 
   - 
   - 
