@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 749050798480541699}
   - component: {fileID: 749050798480541700}
   - component: {fileID: 749050798480541698}
+  - component: {fileID: 6123393000370631923}
   m_Layer: 0
   m_Name: BaliseTileMap
   m_TagString: Untagged
@@ -147,7 +148,7 @@ Tilemap:
     m_Data: {r: -8.590361e+9, g: -8.590361e+9, b: -8.590361e+9, a: -8.590361e+9}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_Origin: {x: -8, y: -2, z: 0}
   m_Size: {x: 15, y: 10, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -230,6 +231,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0
+--- !u!19719996 &6123393000370631923
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749050798480541702}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &749050798774982588
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +928,7 @@ MonoBehaviour:
   - {x: 3.1688173, y: 3.3098063, z: 0}
   m_ShapePathHash: -590296930
   m_Mesh: {fileID: 0}
-  m_InstanceId: 50854
+  m_InstanceId: 59626
 --- !u!1 &749050800002188901
 GameObject:
   m_ObjectHideFlags: 0

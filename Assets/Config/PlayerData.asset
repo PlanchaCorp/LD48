@@ -15,10 +15,10 @@ MonoBehaviour:
   maxSpeed: 200
   maxAcc: 2
   accMultiplier: 60
-  groundedHorizontalFriction: 0.15
+  groundedHorizontalFriction: 0.05
   aerialHorizontalFriction: 0.2
   feetRadius: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   jumpForce: 300
