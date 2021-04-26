@@ -55,7 +55,7 @@ public class RopeSystem : MonoBehaviour {
     Debug.DrawRay(playerPosition, (lastRopePoint - playerPosition).normalized * raycastLength, Color.blue);
     RaycastHit2D playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, raycastLength, collisionLayers);
     if (playerToCurrentNextHit) {
-        var colliderWithVertices = playerToCurrentNextHit.collider as CompositeCollider2D;
+      var colliderWithVertices = playerToCurrentNextHit.collider as PolygonCollider2D;
         if (colliderWithVertices != null)
         {
             var closestPointToHit = GetClosestColliderPointFromRaycastHit(playerToCurrentNextHit, colliderWithVertices);
@@ -75,13 +75,17 @@ public class RopeSystem : MonoBehaviour {
     }
   }
 
-  private Vector2 GetClosestColliderPointFromRaycastHit(RaycastHit2D hit, PolygonCollider2D polyCollider) {
+  private Vector2 GetClosestColliderPointFromRaycastHit(RaycastHit2D hit, PolygonCollider2D polyCollider)
+{
+    // 2
     var distanceDictionary = polyCollider.points.ToDictionary<Vector2, float, Vector2>(
         position => Vector2.Distance(hit.point, polyCollider.transform.TransformPoint(position)),
         position => polyCollider.transform.TransformPoint(position));
+
+    // 3
     var orderedDictionary = distanceDictionary.OrderBy(e => e.Key);
     return orderedDictionary.Any() ? orderedDictionary.First().Value : Vector2.zero;
-  }
+}
 
 /// Reset the rope as a zero length segment
   private void ResetRope() {
