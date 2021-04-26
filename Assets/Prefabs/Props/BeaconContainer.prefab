@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 886766371289831367}
   - component: {fileID: 886766371289831364}
   - component: {fileID: 886766371289831365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BeaconContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,11 +291,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.31
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -357,11 +357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.48
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 6004189504114536421, guid: f6d41c3b86292a5a888a9771c2d1312b, type: 3}
       propertyPath: m_LocalPosition.z

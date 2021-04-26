@@ -55,9 +55,23 @@ public class RopeSystem : MonoBehaviour {
     Debug.DrawRay(playerPosition, (lastRopePoint - playerPosition).normalized * raycastLength, Color.blue);
     RaycastHit2D playerToCurrentNextHit = Physics2D.Raycast(playerPosition, (lastRopePoint - playerPosition).normalized, raycastLength, collisionLayers);
     if (playerToCurrentNextHit) {
-        ropePositions.Add(playerToCurrentNextHit.point);
-        wrapPointsLookup.Add(playerToCurrentNextHit.point, 0);
-        distanceSet = false;
+        var colliderWithVertices = playerToCurrentNextHit.collider as CompositeCollider2D;
+        if (colliderWithVertices != null)
+        {
+            var closestPointToHit = GetClosestColliderPointFromRaycastHit(playerToCurrentNextHit, colliderWithVertices);
+
+            // 4
+            if (wrapPointsLookup.ContainsKey(closestPointToHit))
+            {
+                ResetRope();
+                return;
+            }
+
+            // 5
+            ropePositions.Add(closestPointToHit);
+            wrapPointsLookup.Add(closestPointToHit, 0);
+            distanceSet = false;
+        }
     }
   }
 
@@ -90,9 +104,7 @@ public class RopeSystem : MonoBehaviour {
       HandleRopeUnwrap();
       UpdateRopePositions();
       if (canClimb) {
-        if (!isColliding) {
           ropeJoint.distance += Time.deltaTime * climbSpeed;
-        }
       }
     }
     if (ropeJoint.distance + SumUsedRopeDistance()  > ROPE_MAX_DISTANCE ) {

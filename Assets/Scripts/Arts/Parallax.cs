@@ -5,19 +5,20 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
   private float startpos;
-  public GameObject cam;
   public float parallaxEffect;
+  private Transform cam;
 
     // Start is called before the first frame update
     void Start()
     {
+      cam = Camera.main.transform;
     startpos = transform.position.x;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-    float dist = (cam.transform.position.x * parallaxEffect);
+    float dist = (cam.position.x * parallaxEffect);
     transform.position = new Vector3(startpos + dist, transform.position.y, transform.position.z);
     }
 }
