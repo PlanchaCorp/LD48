@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DroneDepartMat
+  m_Name: droneDepartMat
   m_Shader: {fileID: -6465566751694194690, guid: dd29d3ecb9d73624abeed29fd3c23496, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
