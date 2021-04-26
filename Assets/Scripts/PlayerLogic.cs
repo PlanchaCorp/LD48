@@ -22,6 +22,7 @@ class PlayerLogic{
       playerSimulation.FaceDirection(movement > 0);
   }
   public void FixedUpdate(float deltaTime){
+      Debug.Log("move");
       playerSimulation.MovePlayer(currentMovement * deltaTime);
       if(isGrounded()) {
         playerSimulation.groundFriction();
