@@ -13,6 +13,8 @@ public class BeaconGenerator : MonoBehaviour
   private List<BeaconReach> beaconReachs;
   private SoundManager soundManager;
 
+  public bool canPlace = true;
+
   private Transform _player;
   private Transform player {
     get {
@@ -57,9 +59,14 @@ public class BeaconGenerator : MonoBehaviour
       if (reach != null && reach.isPlayerInReach())
         return null;
     }
+    if(!canPlace)
+    {
+      return null;
+    }
     GameObject beacon = Instantiate(beaconPrefab, position, transform.rotation, transform);
     soundManager.PlaceBeacon();
     beaconPlacedEvent.Raise(beacon);
+
     return beacon;
   }
 }
