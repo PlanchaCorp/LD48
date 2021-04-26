@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2136600271945077634, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.98
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 2136600271945077634, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_LocalPosition.y
@@ -177,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 3442422622006846721, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442422622006846721, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4446918380186927828, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
       propertyPath: m_Enabled
@@ -303,7 +307,6 @@ GameObject:
   m_Component:
   - component: {fileID: 276555720}
   - component: {fileID: 276555719}
-  - component: {fileID: 276555718}
   - component: {fileID: 276555717}
   m_Layer: 0
   m_Name: Main Camera
@@ -344,14 +347,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &276555718
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276555716}
-  m_Enabled: 1
 --- !u!20 &276555719
 Camera:
   m_ObjectHideFlags: 0
@@ -510,6 +505,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &674609785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3442422622006846721, guid: 9ff10cff319c0ed0f8ae909bb9e30a33, type: 3}
+  m_PrefabInstance: {fileID: 114154213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &674609796
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674609785}
+  m_Enabled: 1
 --- !u!1 &701809402
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +847,10 @@ PrefabInstance:
     - target: {fileID: 886766371289831418, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
       propertyPath: m_Name
       value: BeaconContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 886766371289831418, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdfe9e243067e54ba88013db212581ad, type: 3}

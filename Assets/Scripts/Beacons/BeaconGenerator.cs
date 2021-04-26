@@ -11,6 +11,7 @@ public class BeaconGenerator : MonoBehaviour
   private BeaconPlacedEvent beaconPlacedEvent;
 
   private List<BeaconReach> beaconReachs;
+  private SoundManager soundManager;
 
   private Transform _player;
   private Transform player {
@@ -34,6 +35,10 @@ public class BeaconGenerator : MonoBehaviour
     beaconReachs = new List<BeaconReach>();
   }
 
+  private void Start() {
+    soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+  }
+
   public void GenerateBeacon(InputAction.CallbackContext context) {
     if (context.performed) {
       GameObject newBeacon = PlaceBeacon(player.transform.position);
@@ -52,6 +57,7 @@ public class BeaconGenerator : MonoBehaviour
         return null;
     }
     GameObject beacon = Instantiate(beaconPrefab, position, transform.rotation, transform);
+    soundManager.PlaceBeacon();
     beaconPlacedEvent.Raise(beacon);
     return beacon;
   }
