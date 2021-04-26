@@ -13,6 +13,20 @@ public class SoundManager : MonoBehaviour
     private AudioSource beaconPlacement;
     private AudioSource connectEnd;
 
+    private static SoundManager instance = null;
+    private static SoundManager Instance
+    {
+      get { return instance;}
+    }
+
+    void Awake(){
+      if(instance != null &&  instance != this){
+        Destroy(gameObject);
+      } else {
+        instance = this;
+      }
+      DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
       AudioListener.volume = 0.15f;
@@ -23,7 +37,7 @@ public class SoundManager : MonoBehaviour
         steps = transform.Find("Steps").GetComponent<AudioSource>();
         beaconPlacement = transform.Find("BeaconPlacement").GetComponent<AudioSource>();
         connectEnd = transform.Find("ConnectEnd").GetComponent<AudioSource>();
-        DontDestroyOnLoad(gameObject);
+
     }
 
     public void Jump() {
