@@ -943,7 +943,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572874714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1707,8 +1707,8 @@ Camera:
   m_GameObject: {fileID: 1036507613}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2017,6 +2017,7 @@ MonoBehaviour:
   mainPanel: {fileID: 1509042842}
   levelsPanel: {fileID: 1779689377}
   creditsPanel: {fileID: 129223403}
+  creditsBackArrow: {fileID: 572874718}
 --- !u!222 &1281647766
 CanvasRenderer:
   m_ObjectHideFlags: 0

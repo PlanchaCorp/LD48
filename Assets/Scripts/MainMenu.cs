@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MainMenu : MonoBehaviour
   private RectTransform levelsPanel;
   [SerializeField]
   private RectTransform creditsPanel;
+  [SerializeField]
+  private Image creditsBackArrow;
 
   public void EnableLevelPanel(bool activate) {
     if (activate)
@@ -21,10 +24,13 @@ public class MainMenu : MonoBehaviour
       tracker.position = mainPanel.transform.position;
   }
   public void EnableCreditsPanel(bool activate) {
-    if (activate)
+    if (activate) {
       tracker.position = creditsPanel.transform.position;
-    else
+      creditsBackArrow.enabled = true;
+    } else {
       tracker.position = mainPanel.transform.position;
+      creditsBackArrow.enabled = false;
+    }
   }
   public void onStart(){
       SceneManager.LoadScene(1);
