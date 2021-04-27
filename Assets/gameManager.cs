@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
   public void OnclickReset(){
-    Debug.Log("reset");
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+  }
+
+  public void OnEscape() {
+    SceneManager.LoadScene("MainMenu");
   }
 }
