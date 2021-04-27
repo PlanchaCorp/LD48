@@ -856,64 +856,7 @@ PolygonCollider2D:
       - {x: -9.821965, y: -39.865612}
       - {x: -16.776464, y: -39.931602}
       - {x: -16.807354, y: -40.90484}
---- !u!1001 &1481150696
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6411265687523051029, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_Name
-      value: SoundManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.2328563
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.0417395
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.719342
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
---- !u!43 &1491373281
+--- !u!43 &1478414312
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1077,6 +1020,63 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1481150696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6411265687523051029, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2328563
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0417395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.719342
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411265687523051035, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b1eae25142bdeb89b82a7023d686c783, type: 3}
 --- !u!4 &1539446078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6665865528402491333, guid: cdfe9e243067e54ba88013db212581ad, type: 3}
@@ -18604,10 +18604,6 @@ PrefabInstance:
     - target: {fileID: 2996199487405619909, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2996199488206396605, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
-      propertyPath: m_Intensity
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2996199488206396605, guid: 7a710aa7ccbb7f64ba41411e727742cf, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
